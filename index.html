@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GameHub Store - Tu tienda de videojuegos, componentes y accesorios gamer.">
+    <title>GameHub Store | Inicio</title>
+    <!-- Hoja de estilos externa compartida -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Encabezado y Navegación Principal -->
+    <header class="encabezado">
+        <div class="marca">
+            <h1>GameHub Store</h1>
+            <p>El epicentro del hardware y gaming</p>
+        </div>
+
+        <nav aria-label="Navegación principal">
+            <a href="index.html" class="activo">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="detalle.html">Detalle</a>
+            <a href="carrito.html">Carrito</a>
+            <a href="checkout.html">Checkout</a>
+            <a href="ordenes.html">Mis Órdenes</a>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main>
+        
+        <!-- Banner Principal de Bienvenida -->
+        <section id="banner" class="seccion-banner">
+            <div class="contenido-banner">
+                <h2>Equipa tu Setup al Siguiente Nivel</h2>
+                <p>Encuentra las mejores tarjetas gráficas, procesadores, notebooks y periféricos al mejor precio.</p>
+                <a href="catalogo.html" class="boton-acento">Explorar Catálogo</a>
+            </div>
+        </section>
+
+        <!-- Sección de Productos Destacados (Renderizado Dinámico desde JS) -->
+        <section id="destacados" class="seccion-destacados">
+            <h2>Productos Destacados</h2>
+            <div id="contenedor-destacados" class="grilla-destacados">
+                <!-- Aquí JavaScript renderizará las tarjetas de productos -->
+            </div>
+        </section>
+
+        <!-- Sección de Categorías Rápidas -->
+        <section id="categorias" class="seccion-categorias">
+            <h2>Categorías Principales</h2>
+            <div class="grilla-categorias">
+                <article class="tarjeta-categoria">
+                    <h3>Notebooks Gamer</h3>
+                    <p>Potencia portátil para jugar donde quieras.</p>
+                </article>
+                <article class="tarjeta-categoria">
+                    <h3>Tarjetas Gráficas</h3>
+                    <p>Rendimiento extremo y Ray Tracing.</p>
+                </article>
+                <article class="tarjeta-categoria">
+                    <h3>Consolas</h3>
+                    <p>Las últimas generaciones de entretenimiento.</p>
+                </article>
+                <article class="tarjeta-categoria">
+                    <h3>Periféricos</h3>
+                    <p>Teclados mecánicos, mouses y audífonos.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Video Embebido Obligatorio -->
+        <section id="video-destacado" class="seccion-video">
+            <h2>Lanzamientos y Reseñas</h2>
+            <div class="contenedor-video">
+                <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                    title="Video de presentación GameHub Store" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de Página Informativo -->
+    <footer>
+        <div class="contenido-footer">
+            <p><strong>GameHub Store</strong> &copy; 2026 - Desarrollo FullStack II</p>
+            <p>Proyecto Semestral - Evaluación Parcial 1</p>
+        </div>
+    </footer>
+
+</body>
+</html>

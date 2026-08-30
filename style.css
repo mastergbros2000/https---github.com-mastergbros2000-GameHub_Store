@@ -1,0 +1,209 @@
+/* ==========================================================================
+   GameHub Store - Hoja de Estilos Principal (EP1)
+   Paleta: Vitrina Oscura + Acentos Morados/Violetas Gamer
+   ========================================================================== */
+
+/* Variables Globale de Color y Configuración */
+:root {
+    --color-fondo: #171A21;       /* Grafito muy oscuro estilo vitrina */
+    --color-superficie: #1B2838;  /* Azul/gris oscuro para tarjetas y secciones */
+    --color-superficie-alt: #2A3F5A; /* Superficie secundaria para elevación visual */
+    --color-primario: #9D4EDD;    /* Morado vibrante para títulos, bordes y botones secundarios */
+    --color-acento: #C77DFF;      /* Lavanda neón exclusivo para la acción principal y hovers */
+    --color-texto: #C7D5E0;       /* Gris claro/celeste para lectura descansada */
+    --color-texto-brillante: #FFFFFF; /* Blanco puro para encabezados */
+    --color-error: #FF6B6B;       /* Rojo para mensajes de validación */
+    
+    --radio-borde: 8px;
+    --transicion-suave: all 0.3s ease;
+}
+
+/* Reset Básico Universal */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   Encabezado y Navegación
+   ========================================================================== */
+.encabezado {
+    background-color: var(--color-superficie);
+    border-bottom: 2px solid var(--color-primario);
+    padding: 1rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.marca h1 {
+    color: var(--color-texto-brillante);
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.marca p {
+    color: var(--color-acento);
+    font-size: 0.85rem;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+nav a {
+    color: var(--color-texto);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radio-borde);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transicion-suave);
+}
+
+nav a:hover,
+nav a.activo {
+    background-color: var(--color-primario);
+    color: var(--color-texto-brillante);
+}
+
+/* ==========================================================================
+   Estructura Principal (Main) y Secciones
+   ========================================================================== */
+main {
+    flex: 1;
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+section h2 {
+    color: var(--color-texto-brillante);
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    border-left: 4px solid var(--color-acento);
+    padding-left: 0.8rem;
+}
+
+/* Banner Principal */
+.seccion-banner {
+    background: linear-gradient(135deg, var(--color-superficie) 0%, var(--color-superficie-alt) 100%);
+    border: 1px solid var(--color-primario);
+    border-radius: var(--radio-borde);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.contenido-banner h2 {
+    border-left: none;
+    padding-left: 0;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    margin-bottom: 0.8rem;
+}
+
+.contenido-banner p {
+    font-size: 1.1rem;
+    margin-bottom: 1.8rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.boton-acento {
+    display: inline-block;
+    background-color: var(--color-primario);
+    color: var(--color-texto-brillante);
+    text-decoration: none;
+    padding: 0.8rem 1.8rem;
+    border-radius: var(--radio-borde);
+    font-weight: bold;
+    font-size: 1rem;
+    transition: var(--transicion-suave);
+    border: none;
+    cursor: pointer;
+}
+
+.boton-acento:hover {
+    background-color: var(--color-acento);
+    color: var(--color-fondo);
+    transform: translateY(-2px);
+}
+
+/* Grillas Adaptables (Categorías y Destacados) */
+.grilla-destacados,
+.grilla-categorias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.tarjeta-categoria {
+    background-color: var(--color-superficie);
+    border: 1px solid rgba(157, 78, 221, 0.2);
+    border-radius: var(--radio-borde);
+    padding: 1.5rem;
+    transition: var(--transicion-suave);
+}
+
+.tarjeta-categoria:hover {
+    border-color: var(--color-acento);
+    transform: translateY(-4px);
+}
+
+.tarjeta-categoria h3 {
+    color: var(--color-acento);
+    margin-bottom: 0.5rem;
+}
+
+/* Sección Video Embebido */
+.contenedor-video {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--radio-borde);
+    border: 1px solid var(--color-primario);
+}
+
+.contenedor-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ==========================================================================
+   Pie de Página (Footer)
+   ========================================================================== */
+footer {
+    background-color: var(--color-superficie);
+    border-top: 1px solid var(--color-primario);
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+.contenido-footer p {
+    margin: 0.2rem 0;
+}

@@ -14,7 +14,7 @@ identidad visual consistente
 jerarquía correcta de encabezados y atributos alt en imágenes.
 
 -Los estilos se declaran en una hoja CSS externa compartida por todas las páginas. No se aceptan
-estilos incrustados salvo justicación técnica escrita.
+estilos incrustados salvo justificación técnica escrita.
 
 -Todo formulario valida en el cliente antes de enviar, con mensajes propios mostrados junto al
 campo que falla
@@ -32,6 +32,6 @@ por variable de entorno
 
         Main.js
         index.html
-	README.txt
-	style.css
+	    README.txt
+	    style.css
 ------------------------------

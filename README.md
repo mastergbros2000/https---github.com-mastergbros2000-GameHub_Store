@@ -1,10 +1,12 @@
 ----------INTEGRANDES--------
+
          Brayan Alarcón
          Benjamín Bravo
          Daniela Salinas
 -----------------------------
 
 ------REQUISITOS PREVIOS-----
+
 -Todas las vistas deben ser alcanzables desde un menú de navegación común y mantener una
 identidad visual consistente
 
@@ -27,6 +29,7 @@ por variable de entorno
 ------------------------------
 
 ----ESTRUCTURA DE CARPETAS----
+
         Main.js
         index.html
 	README.txt

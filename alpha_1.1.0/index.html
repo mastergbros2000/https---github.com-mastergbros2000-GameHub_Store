@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub Store - Inicio</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+
+    <header class="cabecera">
+        <div class="contenedor cabecera-contenido">
+            <h1 class="marca">GameHub Store</h1>
+            <nav class="navegacion" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="carrito.html">Carrito <span id="contador-carrito" class="contador-carrito">0</span></a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="ordenes.html">Mis órdenes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        
+        <section class="banner">
+            <h2>Tu próxima partida comienza aquí</h2>
+            <p>Notebooks, componentes, consolas y periféricos para todos los jugadores.</p>
+            <a class="boton" href="catalogo.html">Explorar catálogo</a>
+        </section>
+
+        <section class="seccion">
+            <h2>Productos destacados</h2>
+            <div id="productos-destacados" class="grilla-productos"></div>
+        </section>
+
+        <section class="seccion">
+            <h2>Categorías</h2>
+            <div class="grilla-categorias">
+                <article class="tarjeta">
+                    <h3>Notebooks</h3>
+                    <p>Equipos preparados para jugar y estudiar.</p>
+                </article>
+                <article class="tarjeta">
+                    <h3>Componentes</h3>
+                    <p>Mejora el rendimiento de tu computador.</p>
+                </article>
+                <article class="tarjeta">
+                    <h3>Periféricos</h3>
+                    <p>Teclados, mouse y accesorios gamer.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <h2>Conoce las novedades gamer</h2>
+            <video class="video" controls poster="img/productos/pc_gamer_aorus.png">
+                <source src="video/novedades_gamehub.mp4" type="video/mp4">
+                Tu navegador no puede reproducir este video.
+            </video>
+        </section>
+
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor">
+            <p>GameHub Store - Proyecto académico 2026</p>
+            <p>Desarrollo FullStack II - Duoc UC</p>
+        </div>
+    </footer>
+
+</body>
+</html>

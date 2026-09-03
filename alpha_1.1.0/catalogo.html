@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub Store - Catálogo</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+
+    <header class="cabecera">
+        <div class="contenedor cabecera-contenido">
+            <h1 class="marca">GameHub Store</h1>
+            <nav class="navegacion" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="carrito.html">Carrito <span id="contador-carrito" class="contador-carrito">0</span></a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="ordenes.html">Mis órdenes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <section class="seccion">
+            <h2>Catálogo de productos</h2>
+            
+            <form id="formulario-filtros" class="filtros">
+                <div class="fila-formulario">
+                    
+                    <div class="campo">
+                        <label for="categoria">Categoría</label>
+                        <select id="categoria">
+                            <option value="">Todas</option>
+                            <option>Notebooks</option>
+                            <option>Componentes</option>
+                            <option>Periféricos</option>
+                            <option>Monitores</option>
+                            <option>Consolas</option>
+                            <option>Computadores</option>
+                        </select>
+                    </div>
+                    
+                    <div class="campo">
+                        <label for="marca">Marca</label>
+                        <select id="marca">
+                            <option value="">Todas</option>
+                            <option>ASUS</option>
+                            <option>HP</option>
+                            <option>MSI</option>
+                            <option>Redragon</option>
+                            <option>Master-G</option>
+                            <option>Nintendo</option>
+                            <option>Sony</option>
+                            <option>Gigabyte</option>
+                            <option>JBL</option>
+                        </select>
+                    </div>
+                    
+                    <div class="campo">
+                        <label for="orden">Ordenar</label>
+                        <select id="orden">
+                            <option value="">Sin orden</option>
+                            <option value="nombre">Nombre</option>
+                            <option value="precio-menor">Precio menor</option>
+                            <option value="precio-mayor">Precio mayor</option>
+                        </select>
+                    </div>
+                    
+                    <div class="campo">
+                        <label for="precio-minimo">Precio mínimo</label>
+                        <input id="precio-minimo" type="number" min="0" placeholder="0">
+                        <small class="ayuda">Solo números positivos.</small>
+                    </div>
+                    
+                    <div class="campo">
+                        <label for="precio-maximo">Precio máximo</label>
+                        <input id="precio-maximo" type="number" min="0" placeholder="1000000">
+                        <small id="error-precio" class="mensaje-error"></small>
+                    </div>
+                    
+                </div>
+                
+                <button class="boton" type="submit">Aplicar filtros</button> 
+                <button class="boton boton-secundario" type="reset">Limpiar</button>
+            </form>
+            
+            <div id="lista-productos" class="grilla-productos"></div>
+            
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>GameHub Store - Proyecto académico 2026</p>
+    </footer>
+
+</body>
+</html>

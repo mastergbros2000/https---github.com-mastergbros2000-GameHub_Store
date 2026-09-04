@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub Store - Carrito</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+
+    <header class="cabecera">
+        <div class="contenedor cabecera-contenido">
+            <h1 class="marca">GameHub Store</h1>
+            <nav class="navegacion" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="carrito.html">Carrito <span id="contador-carrito" class="contador-carrito">0</span></a></li>
+                    <li><a href="ordenes.html">Mis órdenes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <section class="seccion">
+            <h2>Carrito de compras</h2>
+            
+            <div id="lineas-carrito"></div>
+            
+            <div class="formulario">
+                <label for="cupon">Cupón de descuento</label>
+                <input id="cupon" type="text" placeholder="Prueba GAME10">
+                <small class="ayuda">El cupón se aplica solamente a productos que no tengan una oferta activa.</small>
+                <button id="aplicar-cupon" class="boton" type="button">Aplicar cupón</button>
+                <p id="mensaje-cupon"></p>
+            </div>
+            
+            <aside class="resumen">
+                <h2>Resumen</h2>
+                <p>Subtotal: <strong id="subtotal">$0</strong></p>
+                <p>Descuento del cupón: <strong id="descuento">$0</strong></p>
+                <p>Total: <strong id="total">$0</strong></p>
+                <a class="boton" href="checkout.html">Continuar al checkout</a> 
+                <button id="vaciar-carrito" class="boton boton-secundario">Vaciar carrito</button>
+            </aside>
+            
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>GameHub Store - Proyecto académico 2026</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+ALPHA_1.1.1 UPDATE
+
+cambios:
+- se ajusta el tamaño de el botón "agregar" para que no desentone de el botón "ver detalle"
+- se modifico la ubicación de la sección de "filtros" moviéndola hacia la izquierda de la pagina
+- se elimino el botón de "chekout" de el banner de la pagina
+- el banner se mantiene en la parte superior de la pagina cuando se revisa esta
+
+añadidos:
+- carrusel en el index.html de la pagina

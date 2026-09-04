@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub Store - Checkout</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+
+    <header class="cabecera">
+        <div class="contenedor cabecera-contenido">
+            <h1 class="marca">GameHub Store</h1>
+            <nav class="navegacion" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="carrito.html">Carrito <span id="contador-carrito" class="contador-carrito">0</span></a></li>
+                    <li><a href="ordenes.html">Mis órdenes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <section class="seccion">
+            <h2>Finalizar compra</h2>
+            
+            <p id="resumen-checkout" class="resumen"></p>
+            
+            <form id="formulario-checkout" class="formulario" novalidate>
+                
+                <div class="campo">
+                    <label for="nombre">Nombre completo</label>
+                    <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+                    <small class="ayuda">Escribe el nombre de quien recibirá el pedido.</small>
+                    <p id="error-nombre" class="mensaje-error"></p>
+                </div>
+                
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input id="correo" name="correo" type="email" autocomplete="email" required>
+                    <p id="error-correo" class="mensaje-error"></p>
+                </div>
+                
+                <div class="campo">
+                    <label for="telefono">Teléfono</label>
+                    <input id="telefono" name="telefono" type="tel" autocomplete="tel" placeholder="912345678" required>
+                    <small class="ayuda">Ingresa 9 dígitos, sin +56 ni espacios.</small>
+                    <p id="error-telefono" class="mensaje-error"></p>
+                </div>
+                
+                <div class="campo">
+                    <label for="region">Región</label>
+                    <select id="region" name="region" autocomplete="address-level1" required>
+                        <option value="">Selecciona</option>
+                        <option>Valparaíso</option>
+                        <option>Metropolitana</option>
+                        <option>Biobío</option>
+                    </select>
+                    <p id="error-region" class="mensaje-error"></p>
+                </div>
+                
+                <div class="campo">
+                    <label for="comuna">Comuna</label>
+                    <input id="comuna" name="comuna" type="text" autocomplete="address-level2" required>
+                    <p id="error-comuna" class="mensaje-error"></p>
+                </div>
+                
+                <div class="campo">
+                    <label for="direccion">Dirección</label>
+                    <input id="direccion" name="direccion" type="text" autocomplete="street-address" required>
+                    <p id="error-direccion" class="mensaje-error"></p>
+                </div>
+                
+                <div class="campo">
+                    <label for="pago">Método de pago simulado</label>
+                    <select id="pago" required>
+                        <option>Tarjeta de débito</option>
+                        <option>Tarjeta de crédito</option>
+                        <option>Transferencia</option>
+                    </select>
+                </div>
+                
+                <p id="error-carrito" class="mensaje-error"></p>
+                
+                <button class="boton" type="submit">Confirmar orden</button>
+                
+            </form>
+            
+            <div id="confirmacion"></div>
+            
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>GameHub Store - Proyecto académico 2026</p>
+    </footer>
+
+</body>
+</html>

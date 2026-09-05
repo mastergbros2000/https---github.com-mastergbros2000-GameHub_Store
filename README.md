@@ -1,37 +1,25 @@
-----------INTEGRANDES--------
+# GameHub Store
 
-         Brayan Alarcón
-         Benjamín Bravo
-         Daniela Salinas
------------------------------
+Proyecto frontend desarrollado para la asignatura Desarrollo FullStack II.
 
-------REQUISITOS PREVIOS-----
+## Integrantes
 
--Todas las vistas deben ser alcanzables desde un menú de navegación común y mantener una
-identidad visual consistente
+- Brayan Alarcón
+- Benjamín Bravo
+- Daniela Salinas
 
--El marcado debe ser semántico y válido: header, nav, main, section, article y footer, con
-jerarquía correcta de encabezados y atributos alt en imágenes.
+## Versiones
 
--Los estilos se declaran en una hoja CSS externa compartida por todas las páginas. No se aceptan
-estilos incrustados salvo justificación técnica escrita.
+- `alpha_1.0.0`: primera versión del proyecto.
+- `alpha_1.1.0`: versión con nuevas funcionalidades.
+- `alpha_1.1.1`: versión corregida y organizada.
 
--Todo formulario valida en el cliente antes de enviar, con mensajes propios mostrados junto al
-campo que falla
+## Versión actual
 
--El equipo trabaja sobre un repositorio GitHub público con commits descriptivos y distribuidos
-entre los integrantes.
+La versión más reciente es `alpha_1.1.1`.
 
--En EP1 y EP2 los datos provienen de estructuras simuladas en JavaScript. En EP3 esas estructuras se reemplazan por llamadas reales a la API.
+Para ejecutarla:
 
--El repositorio no debe contener credenciales, tokens ni claves. Las URL de la API se configuran
-por variable de entorno
-------------------------------
-
-----ESTRUCTURA DE CARPETAS----
-
-        Main.js
-        index.html
-	    README.txt
-	    style.css
-------------------------------
+1. Ingresar a la carpeta `alpha_1.1.1`.
+2. Abrir `index.html` en Google Chrome.
+3. Mantener la estructura original de carpetas.

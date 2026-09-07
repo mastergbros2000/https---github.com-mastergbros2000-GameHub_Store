@@ -4,9 +4,9 @@ Proyecto frontend desarrollado con HTML5, CSS3 y JavaScript puro para la asignat
 
 ## Integrantes
 
-- [Nombre integrante 1]
-- [Nombre integrante 2]
-- [Nombre integrante 3]
+- Brayan Alarcón
+- Benjamín Bravo
+- Daniela Salinas
 
 ## Ejecución
 

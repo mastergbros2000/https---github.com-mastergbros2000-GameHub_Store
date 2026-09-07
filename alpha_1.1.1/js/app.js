@@ -139,8 +139,15 @@ function crearTarjeta(producto) {
         <p class="precio">${formatoPrecio(precioFinal(producto))}</p>
         <p class="${producto.stock ? '' : 'sin-stock'}">${stock}</p>
         <div class="acciones">
-        <button class="boton boton-secundario" href="detalle.html?id=${producto.id}">Ver detalle</>
-        <button class="boton" data-agregar="${producto.id}" ${producto.stock ? '' : 'disabled'}>Agregar</button>
+            <a class="boton boton-secundario" 
+                    href="detalle.html?id=${producto.id}">
+                Ver detalle
+            </a>
+            <button class="boton" 
+                    data-agregar="${producto.id}" 
+                    ${producto.stock ? '' : 'disabled'}>
+                Agregar
+            </button>
         </div>
     `;
     

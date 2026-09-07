@@ -39,6 +39,6 @@ Proyecto frontend desarrollado con HTML5, CSS3 y JavaScript puro para la asignat
 
 ## Tecnologías de EP1
 
-HTML5, CSS3, JavaScript y GitHub. No utiliza React, Bootstrap ni backend.
+HTML5, CSS3, JavaScript y GitHub. No utiliza React ni backend.
 
 La identidad visual utiliza la paleta oficial "Neón de tienda" del caso.

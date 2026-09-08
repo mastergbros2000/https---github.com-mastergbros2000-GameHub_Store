@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Agregar usuario | Administración GameHub
+  </title>
+  <link href="../css/estilos.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="administracion">
+   <aside class="menu-admin">
+    <h2>
+     GameHub Admin
+    </h2>
+    <nav>
+     <a href="index.html">
+      Inicio
+     </a>
+     <a href="productos.html">
+      Productos
+     </a>
+     <a href="producto-form.html">
+      Agregar producto
+     </a>
+     <a href="usuarios.html">
+      Usuarios
+     </a>
+     <a href="usuario-form.html">
+      Agregar usuario
+     </a>
+     <a href="../index.html">
+      Volver a la tienda
+     </a>
+    </nav>
+   </aside>
+   <main class="contenido-admin">
+    <h1>
+     Agregar usuario
+    </h1>
+    <form class="formulario" id="formulario-usuario-admin" novalidate="">
+     <div class="campo">
+      <label for="usuario-rut">
+       RUN *
+      </label>
+      <input id="usuario-rut" maxlength="9" minlength="7" placeholder="19011022K"/>
+      <p class="mensaje" id="error-usuario-rut">
+      </p>
+     </div>
+     <div class="campo">
+      <label for="usuario-nombre">
+       Nombre *
+      </label>
+      <input id="usuario-nombre" maxlength="50"/>
+      <p class="mensaje" id="error-usuario-nombre">
+      </p>
+     </div>
+     <div class="campo">
+      <label for="usuario-apellidos">
+       Apellidos *
+      </label>
+      <input id="usuario-apellidos" maxlength="100"/>
+      <p class="mensaje" id="error-usuario-apellidos">
+      </p>
+     </div>
+     <div class="campo">
+      <label for="usuario-correo">
+       Correo *
+      </label>
+      <input id="usuario-correo" maxlength="100" type="email"/>
+      <p class="mensaje" id="error-usuario-correo">
+      </p>
+     </div>
+     <div class="campo">
+      <label for="usuario-fecha">
+       Fecha de nacimiento
+      </label>
+      <input id="usuario-fecha" type="date"/>
+     </div>
+     <div class="campo">
+      <label for="usuario-tipo">
+       Tipo de usuario *
+      </label>
+      <select id="usuario-tipo">
+       <option value="">
+        Selecciona
+       </option>
+       <option>
+        Administrador
+       </option>
+       <option>
+        Cliente
+       </option>
+       <option>
+        Vendedor
+       </option>
+      </select>
+      <p class="mensaje" id="error-usuario-tipo">
+      </p>
+     </div>
+     <div class="campo">
+      <label for="usuario-region">
+       Región *
+      </label>
+      <select id="usuario-region">
+       <option value="">
+        Selecciona una región
+       </option>
+      </select>
+      <p class="mensaje" id="error-usuario-region">
+      </p>
+     </div>
+     <div class="campo">
+      <label for="usuario-comuna">
+       Comuna *
+      </label>
+      <select disabled="" id="usuario-comuna">
+       <option value="">
+        Selecciona una comuna
+       </option>
+      </select>
+      <p class="mensaje" id="error-usuario-comuna">
+      </p>
+     </div>
+     <div class="campo">
+      <label for="usuario-direccion">
+       Dirección *
+      </label>
+      <textarea id="usuario-direccion" maxlength="300">
+                        </textarea>
+      <p class="mensaje" id="error-usuario-direccion">
+      </p>
+     </div>
+     <button class="boton" type="submit">
+      Guardar usuario
+     </button>
+     <p class="mensaje" id="resultado-usuario">
+     </p>
+    </form>
+   </main>
+  </div>
+  <script src="../js/datos.js">
+  </script>
+  <script src="../js/comun.js">
+  </script>
+  <script src="../js/formularios.js">
+  </script>
+  <script src="../js/admin.js">
+  </script>
+ </body>
+</html>

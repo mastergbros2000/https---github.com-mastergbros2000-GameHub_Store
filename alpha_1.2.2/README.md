@@ -16,6 +16,13 @@ Frontend académico de una tienda gamer, desarrollado con HTML5, CSS externo, Ja
 - blog-detalle-2.html: blog a detalle sobre la segunda opcion
 - css/estilos.css: paleta, componentes y diseño adaptable.
 - img/: imágenes locales.
+- carrito.html: carrito de productos
+- catalogo.html: catalogo de productos de la tienda
+- chekout.html: formulario y confirmación de la compra
+- detalle.html: detalles de los productos
+- index.html: inicio de la pagina
+- nosotros.html: información sobre nosotros como pagina web
+- ordenes.html: registro de las ordenes de el cliente
 - js/datos.js: productos, regiones/comunas y blog.
 - js/comun.js: utilidades, mensajes y localStorage.
 - js/tienda.js: catálogo, detalle, carrito, órdenes y blog.
@@ -25,6 +32,7 @@ Frontend académico de una tienda gamer, desarrollado con HTML5, CSS externo, Ja
 - contacto.html: formulario para contactar con nosotros
 - login.html: formulario para el inicio de sesión a la pagina
 - registro.html: formulario para el registro a la pagina
+
 
 ## Funcionalidades
 

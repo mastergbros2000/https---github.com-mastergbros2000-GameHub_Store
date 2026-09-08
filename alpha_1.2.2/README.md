@@ -37,6 +37,6 @@ Frontend académico de una tienda gamer, desarrollado con HTML5, CSS externo, Ja
 
 ## Importante antes de entregar
 
-Reemplazar 56912345678 en los archivos HTML por el número real de WhatsApp del equipo.
+Reemplazar +56912345678 en los archivos HTML por el número real de WhatsApp del equipo.
 Los datos se guardan localmente en el navegador; EP1 no utiliza backend ni base de datos.
 

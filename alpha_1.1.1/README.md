@@ -17,6 +17,9 @@ Proyecto frontend desarrollado con HTML5, CSS3 y JavaScript puro para la asignat
 ## Estructura
 
 - `index.html`: inicio.
+- `blog.html`: blog de ayuda para el usuario
+- `blog-detalle-1.html`: blog a detalle sobre la primera opcion
+- `blog-detalle-2.html`: blog a detalle sobre la segunda opcion
 - `catalogo.html`: filtros y catálogo dinámico.
 - `detalle.html`: información de cada producto.
 - `carrito.html`: carrito, cupón y totales.
@@ -26,6 +29,9 @@ Proyecto frontend desarrollado con HTML5, CSS3 y JavaScript puro para la asignat
 - `js/app.js`: datos simulados, DOM, carrito y validaciones.
 - `img/`: imágenes locales del catálogo.
 - `video/`: video local de novedades, sin dependencia de YouTube.
+- `contacto.html`: formulario para contactar con nosotros
+- `login.html`: formulario para el inicio de sesión a la pagina
+- `registro.html`: formulario para el registro a la pagina
 
 ## Pruebas rápidas
 

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Usuarios | Administración GameHub
+  </title>
+  <link href="../css/estilos.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="administracion">
+   <aside class="menu-admin">
+    <h2>
+     GameHub Admin
+    </h2>
+    <nav>
+     <a href="index.html">
+      Inicio
+     </a>
+     <a href="productos.html">
+      Productos
+     </a>
+     <a href="producto-form.html">
+      Agregar producto
+     </a>
+     <a href="usuarios.html">
+      Usuarios
+     </a>
+     <a href="usuario-form.html">
+      Agregar usuario
+     </a>
+     <a href="../index.html">
+      Volver a la tienda
+     </a>
+    </nav>
+   </aside>
+   <main class="contenido-admin">
+    <h1>
+     Usuarios registrados
+    </h1>
+    <p>
+     <a class="boton" href="usuario-form.html">
+      Agregar usuario
+     </a>
+    </p>
+    <div class="tabla-contenedor">
+     <table>
+      <thead>
+       <tr>
+        <th>
+         RUN
+        </th>
+        <th>
+         Nombre
+        </th>
+        <th>
+         Correo
+        </th>
+        <th>
+         Tipo
+        </th>
+       </tr>
+      </thead>
+      <tbody id="tabla-usuarios-admin">
+      </tbody>
+     </table>
+    </div>
+   </main>
+  </div>
+  <script src="../js/datos.js">
+  </script>
+  <script src="../js/comun.js">
+  </script>
+  <script src="../js/formularios.js">
+  </script>
+  <script src="../js/admin.js">
+  </script>
+ </body>
+</html>

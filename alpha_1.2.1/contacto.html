@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Contacto | GameHub Store
+  </title>
+  <link href="css/estilos.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header class="encabezado">
+   <div class="contenedor barra-navegacion">
+    <a class="marca" href="index.html">
+     GameHub
+     <span>
+      Store
+     </span>
+    </a>
+    <nav aria-label="Navegación principal" class="menu">
+     <a href="index.html">
+      Inicio
+     </a>
+     <a href="catalogo.html">
+      Productos
+     </a>
+     <a href="blog.html">
+      Blog
+     </a>
+     <a href="nosotros.html">
+      Nosotros
+     </a>
+     <a href="contacto.html">
+      Contacto
+     </a>
+     <a href="login.html">
+      Ingresar
+     </a>
+     <a href="registro.html">
+      Registro
+     </a>
+     <a href="carrito.html">
+      Carrito
+      <span class="contador-carrito">
+       0
+      </span>
+     </a>
+    </nav>
+   </div>
+  </header>
+  <main>
+   <section class="seccion">
+    <div class="contenedor">
+     <h1>
+      Contacto
+     </h1>
+     <form class="formulario" id="formulario-contacto" novalidate="">
+      <div class="campo">
+       <label for="contacto-nombre">
+        Nombre *
+       </label>
+       <input id="contacto-nombre" maxlength="100"/>
+       <p class="mensaje" id="error-contacto-nombre">
+       </p>
+      </div>
+      <div class="campo">
+       <label for="contacto-correo">
+        Correo *
+       </label>
+       <input id="contacto-correo" maxlength="100" type="email"/>
+       <p class="mensaje" id="error-contacto-correo">
+       </p>
+      </div>
+      <div class="campo">
+       <label for="contacto-comentario">
+        Comentario *
+       </label>
+       <textarea id="contacto-comentario" maxlength="500">
+                    </textarea>
+       <p class="mensaje" id="error-contacto-comentario">
+       </p>
+      </div>
+      <button class="boton" type="submit">
+       Enviar mensaje
+      </button>
+      <p class="mensaje" id="resultado-contacto">
+      </p>
+     </form>
+    </div>
+   </section>
+  </main>
+  <a aria-label="Contactar por WhatsApp" class="boton-whatsapp" 
+        href="https://wa.me/56912345678?text=Hola%20GameHub%20Store" rel="noopener" target="_blank">
+   WhatsApp
+  </a>
+  <footer class="pie">
+   <div class="contenedor">
+    <p>
+     GameHub Store · Proyecto académico DSY1104 · 2026
+    </p>
+    <p>
+     <a href="admin/index.html">
+      Administración
+     </a>
+    </p>
+   </div>
+  </footer>
+  <script src="js/datos.js">
+  </script>
+  <script src="js/comun.js">
+  </script>
+  <script src="js/formularios.js">
+  </script>
+ </body>
+</html>

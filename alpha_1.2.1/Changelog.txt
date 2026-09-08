@@ -1,0 +1,12 @@
+GAMEHUB STORE - CAMBIOS EP1
+
+- Se ordenó el proyecto por responsabilidades.
+- Se incorporaron todas las vistas públicas solicitadas.
+- Se agregó blog con dos publicaciones detalladas.
+- Se incorporaron registro, login, contacto y checkout con validaciones.
+- Se agregó contraseña obligatoria de 4 a 10 caracteres en el registro.
+- Se agregó panel administrativo con productos y usuarios.
+- Se mantuvieron 9 productos y 3 ofertas.
+- El cupón GAME10 no se acumula con descuentos existentes.
+- Se agregó WhatsApp en las vistas públicas.
+- Se completó la ERS versión 1 para el alcance del frontend.

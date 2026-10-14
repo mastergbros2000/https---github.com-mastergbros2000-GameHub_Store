@@ -189,6 +189,8 @@ function prepararCheckout() {
 
     formulario.addEventListener('submit', evento => {
         evento.preventDefault();
+        
+        // Validaciones existentes
         const nombreCorrecto = validarTexto(
             document.getElementById('checkout-nombre'),
             'error-checkout-nombre',
@@ -218,6 +220,23 @@ function prepararCheckout() {
             'error'
         );
 
+        // NUEVAS VALIDACIONES: Teléfono y Pago
+        const telefono = document.getElementById('checkout-telefono').value.trim();
+        const regexTelefono = /^9\d{8}$/; // Exige que empiece con 9 y tenga 9 dígitos en total
+        const telefonoCorrecto = mostrarMensaje(
+            'error-checkout-telefono',
+            regexTelefono.test(telefono) ? '' : 'Ingresa un teléfono válido de 9 dígitos (ej: 912345678).',
+            'error'
+        );
+
+        const pago = document.getElementById('checkout-pago').value;
+        const pagoCorrecto = mostrarMensaje(
+            'error-checkout-pago',
+            pago !== '' ? '' : 'Selecciona un método de pago.',
+            'error'
+        );
+
+        // Verificación final
         if (obtenerCarrito().length === 0) {
             mostrarMensaje(
                 'resultado-checkout',
@@ -227,6 +246,8 @@ function prepararCheckout() {
         } else if (
             nombreCorrecto &&
             correoCorrecto &&
+            telefonoCorrecto &&
+            pagoCorrecto &&
             direccionCorrecta &&
             regionCorrecta &&
             comunaCorrecta
@@ -234,16 +255,21 @@ function prepararCheckout() {
             const carrito = obtenerCarrito();
             const resumen = calcularResumen(carrito);
             const ordenes = leerAlmacenamiento('ordenesGameHub', []);
-            ordenes.push({
-                numero: Date.now(),
-                fecha: new Date().toLocaleDateString('es-CL'),
-                estado: 'Recibido',
+            
+            ordenes.push({ 
+                numero: 'GH-' + Date.now().toString().slice(-6), 
+                fecha: new Date().toLocaleDateString('es-CL'), 
+                total: resumen.total, 
+                estado: pago === 'transferencia' ? 'Pendiente de pago' : 'Pago aprobado', 
                 productos: carrito,
-                total: resumen.total
+                correoCliente: document.getElementById('checkout-correo').value.trim() // ¡Línea agregada!
             });
+            
             guardarAlmacenamiento('ordenesGameHub', ordenes);
-            guardarCarrito([]);
+            guardarCarrito([]); // Vacía el carrito tras la compra
             formulario.reset();
+            document.getElementById('checkout-comuna').disabled = true; // Bloquea la comuna de nuevo
+            
             mostrarMensaje(
                 'resultado-checkout',
                 'Compra confirmada. Puedes revisar el pedido en Mis órdenes.',

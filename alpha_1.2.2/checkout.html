@@ -72,6 +72,17 @@
        </p>
       </div>
       <div class="campo">
+       <label for="checkout-telefono">
+        Teléfono *
+       </label>
+       <input id="checkout-telefono" type="tel" maxlength="9" placeholder="912345678"/>
+       <p class="ayuda">
+        Ingresa 9 dígitos, comenzando con 9.
+       </p>
+       <p class="mensaje" id="error-checkout-telefono">
+       </p>
+      </div>
+      <div class="campo">
        <label for="checkout-region">
         Región *
        </label>
@@ -102,6 +113,21 @@
        <textarea id="checkout-direccion" maxlength="300">
                     </textarea>
        <p class="mensaje" id="error-checkout-direccion">
+       </p>
+      </div>
+      <div class="campo">
+       <label for="checkout-pago">
+        Método de pago simulado *
+       </label>
+       <select id="checkout-pago">
+        <option value="">
+         Selecciona un método de pago
+        </option>
+        <option value="debito">Tarjeta de Débito</option>
+        <option value="credito">Tarjeta de Crédito</option>
+        <option value="transferencia">Transferencia Bancaria</option>
+       </select>
+       <p class="mensaje" id="error-checkout-pago">
        </p>
       </div>
       <button class="boton" type="submit">

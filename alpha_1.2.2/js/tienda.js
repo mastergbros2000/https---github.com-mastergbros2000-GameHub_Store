@@ -10,6 +10,9 @@ function crearTarjetaProducto(producto) {
     const textoStock = producto.stock > 0
         ? `Stock disponible: ${producto.stock}`
         : 'Producto sin stock';
+        
+    // NUEVO: Texto explícito para el botón
+    const textoBoton = producto.stock > 0 ? 'Agregar' : 'Agotado';
 
     tarjeta.innerHTML = `
         <img src="${producto.imagen}" alt="${producto.nombre}">
@@ -24,7 +27,7 @@ function crearTarjetaProducto(producto) {
             <p class="${producto.stock > 0 ? '' : 'sin-stock'}">${textoStock}</p>
             <div class="acciones">
                 <a class="boton boton-secundario" href="detalle.html?id=${producto.id}">Ver detalle</a>
-                <button class="boton" type="button" data-agregar="${producto.id}" ${producto.stock > 0 ? '' : 'disabled'}>Agregar</button>
+                <button class="boton" type="button" data-agregar="${producto.id}" ${producto.stock > 0 ? '' : 'disabled'}>${textoBoton}</button>
             </div>
         </div>
     `;
@@ -152,6 +155,7 @@ function iniciarDetalle() {
 
     const id = Number(new URLSearchParams(window.location.search).get('id')) || productos[0].id;
     const producto = productos.find(item => item.id === id) || productos[0];
+    const textoBotonDetalle = producto.stock > 0 ? 'Agregar al carrito' : 'Agotado';
 
     contenedor.innerHTML = `
         <div>
@@ -173,7 +177,7 @@ function iniciarDetalle() {
             <label for="cantidad">Cantidad</label>
             <input id="cantidad" type="number" min="1" max="${producto.stock}" value="1">
             <p id="error-cantidad" class="mensaje"></p>
-            <button id="agregar-detalle" class="boton" type="button" ${producto.stock > 0 ? '' : 'disabled'}>Agregar al carrito</button>
+            <button id="agregar-detalle" class="boton" type="button" ${producto.stock > 0 ? '' : 'disabled'}>${textoBotonDetalle}</button>
         </article>
     `;
 
@@ -300,34 +304,45 @@ function iniciarCarrito() {
 
 function iniciarOrdenes() {
     const contenedor = document.getElementById('lista-ordenes');
-
-    if (!contenedor) {
+    if (!contenedor) return;
+    
+    // Verificamos si hay una sesión activa
+    const sesion = leerAlmacenamiento('sesionGameHub', null);
+    
+    if (!sesion) {
+        contenedor.innerHTML = '<p>Debes <a href="login.html">iniciar sesión</a> para ver el seguimiento de tus compras.</p>';
         return;
     }
 
-    const ordenes = leerAlmacenamiento('ordenesGameHub', []);
-
-    if (ordenes.length === 0) {
-        contenedor.innerHTML = '<p>Todavía no existen órdenes. Realiza una compra para ver su seguimiento.</p>';
-        return;
+    const ordenesGlobales = leerAlmacenamiento('ordenesGameHub', []);
+    // Filtramos para mostrar solo las órdenes del usuario actual (asumiendo que en checkout guardaremos su correo)
+    const misOrdenes = ordenesGlobales.filter(orden => orden.correoCliente === sesion.correo);
+    
+    if (misOrdenes.length === 0) { 
+        contenedor.innerHTML = '<p>Todavía no tienes órdenes registradas. Visita el catálogo para comprar.</p>'; 
+        return; 
     }
-
-    ordenes.slice().reverse().forEach(orden => {
-        const nombres = orden.productos.map(linea => {
-            const producto = productos.find(item => item.id === linea.id);
-            return producto ? producto.nombre : 'Producto no disponible';
+    
+    misOrdenes.slice().reverse().forEach(orden => {
+        const nombres = orden.productos.map(l => {
+            const prod = productos.find(p => p.id === l.id);
+            return prod ? prod.nombre : 'Producto no disponible';
         }).join(', ');
-
-        const tarjeta = document.createElement('article');
-        tarjeta.className = 'tarjeta';
-        tarjeta.innerHTML = `
+        
+        const article = document.createElement('article'); 
+        article.className = 'tarjeta';
+        
+        article.innerHTML = `
             <h2>Orden ${orden.numero}</h2>
             <p>Fecha: ${orden.fecha}</p>
             <p>Productos: ${nombres}</p>
             <p>Total: ${formatoPrecio(orden.total)}</p>
             <p><span class="estado">${orden.estado}</span></p>
+            <p>Pago aprobado - Despacho pendiente de asignación.</p>
+            <button class="boton">Escribir reseña</button> 
+            <button class="boton boton-secundario">Solicitar garantía</button>
         `;
-        contenedor.appendChild(tarjeta);
+        contenedor.appendChild(article);
     });
 }
 

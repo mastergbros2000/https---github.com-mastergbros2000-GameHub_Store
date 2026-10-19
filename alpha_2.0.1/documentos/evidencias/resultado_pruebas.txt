@@ -1,0 +1,9 @@
+TOTAL: 84 SUCCESS
+Navegador: Chrome Headless 153
+Entorno: Linux
+Comando: npm test -- --browsers ChromeHeadlessCI
+
+statements: 416/456 (91.22 %)
+branches: 312/357 (87.39 %)
+functions: 160/187 (85.56 %)
+lines: 373/405 (92.09 %)

@@ -1,0 +1,40 @@
+{
+  "name": "gamehub-react",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "test": "karma start karma.conf.cjs",
+    "test:watch": "karma start karma.conf.cjs --no-single-run --auto-watch",
+    "test:chrome": "karma start karma.conf.cjs --browsers ChromeHeadless",
+    "format": "prettier --write src vite.config.js karma.conf.cjs index.html README.md",
+    "format:check": "prettier --check src vite.config.js karma.conf.cjs index.html README.md"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "react": "^19.2.8",
+    "react-bootstrap": "^2.10.10",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "esbuild": "^0.28.2",
+    "istanbul-lib-instrument": "^6.0.3",
+    "jasmine-core": "^4.6.1",
+    "karma": "^6.4.4",
+    "karma-chrome-launcher": "^3.2.0",
+    "karma-coverage": "^2.2.1",
+    "karma-esbuild": "^2.3.0",
+    "karma-jasmine": "^5.1.0",
+    "oxlint": "^1.81.0",
+    "prettier": "^3.9.10",
+    "vite": "^8.3.0"
+  }
+}

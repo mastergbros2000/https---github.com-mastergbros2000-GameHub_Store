@@ -1,0 +1,10 @@
+PASS catálogo: 9 imágenes locales y botones alineados
+PASS compra: cupón no acumulable, rechazo recuperable, aprobación, resumen persistido y stock
+PASS CRUD: crear, recuperar al recargar, editar y eliminar
+PASS registro y sesión demo: validación, sin guardar contraseña y checkout autocompletado
+PASS responsive: 19 rutas sin desborde a 375px
+PASS responsive: 19 rutas sin desborde a 768px
+PASS responsive: 19 rutas sin desborde a 1440px
+PASS menú móvil abre y navega
+PASS video local: metadatos cargados sin error
+PASS sin errores JavaScript en todos los recorridos

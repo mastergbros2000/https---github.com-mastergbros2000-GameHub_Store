@@ -1,0 +1,507 @@
+/* 1. Paleta original y estilos generales */
+:root {
+    --color-fondo: #120e1a;
+    --color-superficie: #1e1730;
+    --color-primario: #d6236a;
+    --color-acento: #00d2ff;
+    --color-texto: #f3effa;
+    --color-error: #ff7a7a;
+    --color-blanco: #f3effa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    color: var(--color-acento);
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.7rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+.contenedor {
+    width: 92%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.contenido-principal {
+    min-height: 70vh;
+    padding-bottom: 40px;
+}
+
+.seccion {
+    padding: 40px 0;
+}
+
+.seccion h1,
+.seccion h2 {
+    color: var(--color-primario);
+    margin-bottom: 22px;
+}
+
+.centrado {
+    text-align: center;
+}
+
+/* 2. Navegación Bootstrap y pie */
+.cabecera {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--color-superficie);
+    border-bottom: 3px solid var(--color-primario);
+}
+
+.marca,
+.navbar-brand {
+    color: var(--color-texto);
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.marca span {
+    color: var(--color-acento);
+}
+
+.navegacion {
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.86rem;
+}
+
+.navegacion .nav-link {
+    color: var(--color-texto);
+    font-weight: bold;
+}
+
+.navegacion .nav-link:hover,
+.navegacion .nav-link.active {
+    color: var(--color-acento);
+}
+
+.contador-carrito {
+    display: inline-block;
+    min-width: 22px;
+    padding: 1px 6px;
+    background: var(--color-acento);
+    color: var(--color-fondo);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.pie {
+    background: var(--color-superficie);
+    border-top: 2px solid var(--color-primario);
+    padding: 25px 0 60px;
+    text-align: center;
+}
+
+.boton-whatsapp {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 900;
+    padding: 12px 16px;
+    border-radius: 25px;
+    background: var(--color-primario);
+    color: var(--color-texto);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* 3. Portada y medios locales */
+.banner-principal {
+    background: var(--color-superficie);
+    border-bottom: 1px solid var(--color-primario);
+    padding: 60px 25px;
+    margin-bottom: 30px;
+}
+
+.imagen-carrusel {
+    display: block;
+    width: 100%;
+    height: 360px;
+    padding: 20px;
+    background: var(--color-superficie);
+    object-fit: contain;
+}
+
+.seccion-video {
+    text-align: center;
+}
+
+.video-novedades {
+    display: block;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    border: 2px solid var(--color-primario);
+    border-radius: 6px;
+    background: var(--color-fondo);
+}
+
+/* 4. Tarjetas y filtros del catálogo */
+.tarjeta {
+    background: var(--color-superficie);
+    border: 1px solid var(--color-primario);
+    border-radius: 6px;
+    padding: 18px;
+}
+
+.tarjeta.producto {
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta.producto img {
+    display: block;
+    width: 100%;
+    height: 210px;
+    padding: 10px;
+    object-fit: contain;
+    background: var(--color-blanco);
+    border-radius: 4px;
+}
+
+.tarjeta.producto h3 {
+    margin-top: 20px;
+    min-height: 2.9rem;
+}
+
+.espacio-oferta {
+    min-height: 80px;
+}
+
+.precio {
+    color: var(--color-primario);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.precio-anterior {
+    text-decoration: line-through;
+}
+
+.oferta,
+.mensaje-exito {
+    color: var(--color-acento);
+}
+
+.filtros-productos {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr auto;
+    gap: 12px;
+    align-items: end;
+    background: var(--color-superficie);
+    padding: 16px;
+    border-radius: 6px;
+    margin-bottom: 28px;
+}
+
+.filtros-productos label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.filtros-productos input,
+.filtros-productos select {
+    width: 100%;
+    min-width: 0;
+    padding: 9px;
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    border: 1px solid var(--color-primario);
+    border-radius: 4px;
+}
+
+.grilla-categorias,
+.grilla-publicaciones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.categoria {
+    color: var(--color-texto);
+    text-decoration: none;
+}
+
+.categoria h3 {
+    overflow-wrap: anywhere;
+}
+
+/* 5. Botones y formularios */
+.boton {
+    display: inline-block;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 10px 15px;
+    background: var(--color-primario);
+    color: var(--color-fondo);
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.boton-secundario {
+    background: transparent;
+    color: var(--color-primario);
+    border-color: var(--color-primario);
+}
+
+.boton:hover,
+.boton:focus-visible {
+    color: var(--color-fondo);
+    background: var(--color-acento);
+}
+
+.boton:disabled {
+    color: var(--color-texto);
+    background: var(--color-superficie);
+    border-color: var(--color-primario);
+    cursor: not-allowed;
+}
+
+.acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.pie-tarjeta {
+    margin-top: auto;
+    padding-top: 12px;
+}
+
+.formulario {
+    max-width: 720px;
+    padding: 24px;
+    border-radius: 6px;
+    background: var(--color-superficie);
+}
+
+.formulario-centrado {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.formulario-admin {
+    max-width: none;
+    margin-bottom: 30px;
+}
+
+.campo {
+    margin-bottom: 18px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 10px;
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    border: 1px solid var(--color-primario);
+    border-radius: 4px;
+}
+
+.campo textarea {
+    min-height: 120px;
+}
+
+.mensaje-error,
+.sin-stock {
+    color: var(--color-error);
+}
+
+/* 6. Carrito, resultados y administración */
+.item-carrito {
+    display: grid;
+    grid-template-columns: 100px 1fr auto;
+    align-items: center;
+    gap: 18px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: var(--color-superficie);
+    border: 1px solid var(--color-primario);
+    border-radius: 6px;
+}
+
+.item-carrito img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    background: var(--color-blanco);
+}
+
+.item-carrito h2 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
+.item-carrito input {
+    display: block;
+    width: 80px;
+    padding: 6px;
+}
+
+.resumen-carrito {
+    padding: 22px;
+    background: var(--color-superficie);
+    border: 1px solid var(--color-primario);
+    border-radius: 6px;
+}
+
+.boton-pagar {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.resultado-compra {
+    max-width: 760px;
+    margin: 40px auto;
+    padding: 30px;
+    background: var(--color-superficie);
+    border: 2px solid var(--color-acento);
+    border-radius: 8px;
+}
+
+.resultado-error {
+    border-color: var(--color-error);
+}
+
+.resumen-orden {
+    overflow-wrap: anywhere;
+}
+
+.imagen-detalle {
+    width: 100%;
+    height: 370px;
+    padding: 15px;
+    object-fit: contain;
+    background: var(--color-blanco);
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--color-superficie);
+}
+
+.tabla th,
+.tabla td {
+    padding: 12px;
+    border: 1px solid var(--color-primario);
+    text-align: left;
+}
+
+.tabla caption {
+    color: var(--color-texto);
+}
+
+.menu-administracion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.menu-administracion a {
+    padding: 10px;
+    background: var(--color-superficie);
+    border: 1px solid var(--color-primario);
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.menu-administracion a.active {
+    color: var(--color-fondo);
+    background: var(--color-acento);
+}
+
+/* 7. Ajustes complementarios a la grilla responsiva de Bootstrap */
+@media (max-width: 1199px) {
+    .navegacion {
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 991px) {
+    .filtros-productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grilla-categorias,
+    .grilla-publicaciones {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575px) {
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    .filtros-productos,
+    .grilla-categorias,
+    .grilla-publicaciones {
+        grid-template-columns: 1fr;
+    }
+
+    .item-carrito {
+        grid-template-columns: 70px 1fr;
+        gap: 12px;
+    }
+
+    .item-carrito img {
+        width: 70px;
+        height: 80px;
+    }
+
+    .item-carrito button {
+        grid-column: 1 / -1;
+    }
+
+    .imagen-carrusel {
+        height: 230px;
+        padding: 10px;
+    }
+
+    .formulario,
+    .resultado-compra {
+        padding: 18px;
+    }
+}

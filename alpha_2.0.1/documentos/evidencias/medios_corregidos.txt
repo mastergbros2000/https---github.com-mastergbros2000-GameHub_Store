@@ -1,0 +1,9 @@
+PASS / datos nuevos: destacados 3/3, autoplay silenciado y repetición real al finalizar
+PASS / datos nuevos: catálogo 9/9, fotos uniformes, botones alineados, detalle y medios sin 404
+PASS / datos anteriores: destacados 3/3, autoplay silenciado y repetición real al finalizar
+PASS / datos anteriores: catálogo 9/9, fotos uniformes, botones alineados, detalle y medios sin 404
+PASS /curso/ datos nuevos: destacados 3/3, autoplay silenciado y repetición real al finalizar
+PASS /curso/ datos nuevos: catálogo 9/9, fotos uniformes, botones alineados, detalle y medios sin 404
+PASS /curso/ datos anteriores: destacados 3/3, autoplay silenciado y repetición real al finalizar
+PASS /curso/ datos anteriores: catálogo 9/9, fotos uniformes, botones alineados, detalle y medios sin 404
+PASS todas las verificaciones de medios

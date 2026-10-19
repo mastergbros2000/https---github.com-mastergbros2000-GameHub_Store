@@ -1,0 +1,14 @@
+Resultado de la corrección de medios
+
+Jasmine y Karma en Chrome Headless: TOTAL: 84 SUCCESS
+Lint: correcto
+Formato: correcto
+Compilación de producción: correcta
+
+Cobertura de esta ejecución:
+Instrucciones: 427/467 (91.43 %)
+Ramas: 315/364 (86.53 %)
+Funciones: 167/194 (86.08 %)
+Líneas: 382/414 (92.27 %)
+
+Se amplió el caso existente de persistencia para verificar la recuperación de la ruta antigua sin perder el precio editado. El caso de inicio verifica los atributos de reproducción del video. El recorrido adicional de navegador comprueba las fotos y la reproducción efectiva con datos nuevos y anteriores, en la raíz y bajo /curso/.
